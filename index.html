@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Guide - Seu Guia de Treinos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>GYM GUIDE</h1>
+        <p>FORJE SEU CORPO, CONSTRUA SUA DISCIPLINA.</p>
+    </header>
+
+    <section id="questionario">
+        <h2>DESCUBRA O TREINO IDEAL PARA VOCÊ</h2>
+        <p>Responda as perguntas abaixo para receber uma recomendação personalizada.</p>
+        <form id="form-recomendacao">
+            <div class="form-group">
+                <label for="idade">Sua Idade</label>
+                <input type="number" id="idade" min="14" max="99" required>
+            </div>
+
+            <div class="form-group">
+                <label>Seu Gênero</label>
+                <div class="gender-group">
+                    <input type="radio" id="masculino" name="genero" value="masculino" required>
+                    <label for="masculino">Masculino</label>
+                    <input type="radio" id="feminino" name="genero" value="feminino" required>
+                    <label for="feminino">Feminino</label>
+                    <input type="radio" id="outro" name="genero" value="outro" required>
+                    <label for="outro">Outro</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="peso">Seu Peso (kg)</label>
+                <input type="number" id="peso" min="30" max="200" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="altura">Sua Altura (em centímetros)</label>
+                <input type="number" id="altura" min="100" max="250" required placeholder="Ex: para 1,75m, digite 175">
+            </div>
+
+            <div class="form-group">
+                <label for="dias">Dias disponíveis para treinar na semana</label>
+                <select id="dias" required>
+                    <option value="">Selecione...</option>
+                    <option value="2">2 dias</option>
+                    <option value="3">3 dias</option>
+                    <option value="4">4 dias</option>
+                    <option value="5">5 ou mais dias</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="nivelAtividade">Seu Nível de Atividade (fora da academia)</label>
+                <select id="nivelAtividade" required>
+                    <option value="">Selecione...</option>
+                    <option value="1.2">Sedentário (pouco ou nenhum exercício)</option>
+                    <option value="1.375">Levemente Ativo (exercício leve 1-3 dias/semana)</option>
+                    <option value="1.55">Moderadamente Ativo (exercício moderado 3-5 dias/semana)</option>
+                    <option value="1.725">Muito Ativo (exercício intenso 6-7 dias/semana)</option>
+                    <option value="1.9">Extremamente Ativo (trabalho físico intenso ou atleta)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="objetivo">Seu Objetivo Principal</label>
+                <select id="objetivo" required>
+                    <option value="">Selecione...</option>
+                    <option value="hipertrofia">Hipertrofia (Ganho de Massa)</option>
+                    <option value="forca">Força</option>
+                    <option value="emagrecimento">Emagrecimento</option>
+                </select>
+            </div>
+            <button type="submit" class="cta-button">GERAR MINHAS RECOMENDAÇÕES</button>
+        </form>
+    </section>
+
+    <section id="info-adicional"></section>
+
+    <main id="conteudo-treino">
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Matheus Lima Viana. Todos os direitos reservados.</p>
+        <p><strong>Aviso:</strong> Consulte sempre um profissional de educação física e um nutricionista antes de iniciar qualquer programa de exercícios ou plano alimentar.</p>
+    </footer>
+
+    <script src="treinos.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
